@@ -2,13 +2,13 @@ from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_community.tools import DuckDuckGoSearchRun
-from dotenv import load_dotenv
+
 import time
-load_dotenv()
+
 
 
 # function to generate script
-def generate(topic, video_length, creativity):
+def generate(api_key,topic, video_length, creativity):
     time.sleep(2)  # Add delay between requests
 
     # template for generating title
@@ -28,6 +28,7 @@ def generate(topic, video_length, creativity):
         model="llama-3.1-8b-instant",
         temperature=creativity,
         max_tokens=1000,
+        api_key= api_key
     )
 
     # Creating chains for title and script generation
