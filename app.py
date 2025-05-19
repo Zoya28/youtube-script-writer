@@ -43,7 +43,7 @@ creativity = st.slider("creativity and word limit", 0.0, 1.0, 0.5)
 # sidebar
 st.sidebar.header("YouTube")
 st.sidebar.subheader("🔐 API Key")
-api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+api_key = st.sidebar.text_input("groq API Key", type="password")
 if api_key:
     st.session_state["API_KEY"] = api_key
 
