@@ -60,6 +60,7 @@ if submit:
                 topic=topic,
                 video_length=video_length,
                 creativity=creativity,
+                api_key=st.session_state["API_KEY"]
             )
 
         st.success("Script generated successfully! 🎉")
